@@ -11,7 +11,7 @@ const {
 const app = express();
 app.use(express.json());
 app.use(cors({ origin: true }));
-app.use('/', graphqlRouter);
+app.use('/graphql', graphqlRouter);
 app.all("/*", handle404s);
 app.use(handleCustomErrors);
 app.use(handlePSQLErrors);
