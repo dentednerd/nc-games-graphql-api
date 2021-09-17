@@ -77,7 +77,7 @@ const updateComment = async (comment_id, inc_votes = 0) => {
       msg: 'Comment not found'
     });
   }
-  return comments;
+  return comments[0];
 }
 
 module.exports = {

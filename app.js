@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const apiRouter = require('./server/routes');
+const graphqlRouter = require('./server');
 const {
   handle404s,
   handle500s,
@@ -11,7 +11,7 @@ const {
 const app = express();
 app.use(express.json());
 app.use(cors({ origin: true }));
-app.use('/api', apiRouter);
+app.use('/', graphqlRouter);
 app.all("/*", handle404s);
 app.use(handleCustomErrors);
 app.use(handlePSQLErrors);

@@ -1,8 +1,8 @@
-# Northcoders House of Games
+# Northcoders House of Games: GraphQL Edition
 
-A RESTful API with a PostgreSQL database.
+A GraphQL and Express API with a PostgreSQL database.
 
-[nc-games-sql-dentednerd.herokuapp.com](https://nc-games-sql-dentednerd.herokuapp.com/)
+~~[nc-games-sql-dentednerd.herokuapp.com](https://nc-games-sql-dentednerd.herokuapp.com/)~~
 
 ## requirements
 
@@ -42,9 +42,9 @@ git push origin main
 
 # to deploy to Heroku:
 # ensure that heroku remote exists:
-git remote -v
+#git remote -v
 # if no heroku remote:
-git add remote heroku https://git.heroku.com/nc-games-sql-dentednerd.git
-npm run seed:prod # on first deploy only
-git push heroku main
+#git add remote heroku https://git.heroku.com/nc-games-sql-dentednerd.git
+#npm run seed:prod # on first deploy only
+#git push heroku main
 ```

@@ -148,7 +148,7 @@ const postCommentToReview = async (review_id, { body, username }) => {
   if (!username || !body) {
     return Promise.reject({
       status: 400,
-      msg: 'Missing required fields'
+      msg: `Missing required fields, username ${username}, body ${body}`
     });
   };
 
@@ -170,7 +170,7 @@ const postCommentToReview = async (review_id, { body, username }) => {
     });
   }
 
-  return comment;
+  return comment[0];
 }
 
 const insertReview = async ({
@@ -199,7 +199,7 @@ const insertReview = async ({
     });
   }
 
-  return review;
+  return review[0];
 }
 
 const removeReviewById = async (review_id) => {
@@ -217,6 +217,9 @@ const removeReviewById = async (review_id) => {
       msg: 'Review not found'
     });
   }
+
+  console.log({ numberOfDeletions });
+  return numberOfDeletions;
 }
 
 module.exports = {

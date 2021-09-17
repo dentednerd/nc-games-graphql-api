@@ -42,7 +42,7 @@ const fetchUserByUsername = (username) => {
           msg: 'User not found'
         });
       }
-      return rows;
+      return rows[0];
     });
 };
 

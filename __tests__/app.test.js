@@ -9,7 +9,7 @@ afterAll(() => db.end());
 
 // API
 
-describe('/api', () => {
+describe.only('/api', () => {
   it('200: returns a JSON of available routes', () => {
     return request(app)
     .get('/api')
